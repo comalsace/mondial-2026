@@ -1,0 +1,200 @@
+.hero {
+  padding: 8rem 0 3rem;
+  background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.06) 0%, transparent 60%);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.5s 0.1s ease both;
+}
+
+.confBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.5s 0.2s ease both;
+}
+
+/* ===== GROUPS GRID ===== */
+.groupsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.groupCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.groupCard:hover {
+  border-color: rgba(255, 215, 0, 0.2);
+  box-shadow: var(--shadow-card);
+}
+
+.groupHeader {
+  padding: 1rem 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.teamsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.teamRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition-fast);
+  cursor: default;
+}
+
+.teamRow:last-child { border-bottom: none; }
+
+.teamRow:hover {
+  background: rgba(255, 215, 0, 0.04);
+}
+
+.teamFlag {
+  font-size: 1.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
+}
+
+.teamInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.teamName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teamConf {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+}
+
+.teamRank {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  padding: 2px 7px;
+  flex-shrink: 0;
+}
+
+/* ===== CONFEDERATION ===== */
+.confTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.confGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.confCard {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  transition: var(--transition-base);
+}
+
+.confCard:hover {
+  border-color: color-mix(in srgb, var(--conf-color) 50%, transparent);
+  background: color-mix(in srgb, var(--conf-color) 5%, transparent);
+}
+
+.confCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confFlag {
+  font-size: 1.75rem;
+}
+
+.confCount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--conf-color);
+  line-height: 1;
+}
+
+.confName {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.confBar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.confBarFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+@media (max-width: 1200px) {
+  .groupsGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .groupsGrid { grid-template-columns: repeat(2, 1fr); }
+  .confGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .groupsGrid { grid-template-columns: 1fr; }
+  .confGrid { grid-template-columns: 1fr; }
+}

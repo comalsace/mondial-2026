@@ -1,0 +1,99 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeInUp 0.5s 0.3s ease both;
+}
+
+.caption {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.countdown > div {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.125rem;
+  min-width: 72px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.unit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+}
+
+.value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.125rem;
+}
+
+.sep {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgba(255, 215, 0, 0.5);
+  padding-bottom: 12px;
+  line-height: 1;
+}
+
+.started {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--color-gold-dim);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-full);
+  padding: 0.625rem 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-gold);
+}
+
+@media (max-width: 480px) {
+  .value { font-size: 1.5rem; }
+  .unit { min-width: 56px; padding: 0.5rem 0.75rem; }
+}

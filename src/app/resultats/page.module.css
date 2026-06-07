@@ -1,0 +1,162 @@
+.hero {
+  padding: 8rem 0 3rem;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 200, 83, 0.06) 0%, transparent 60%);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  animation: fadeInUp 0.5s 0.1s ease both;
+}
+
+/* ===== BLOCKS ===== */
+.block {
+  margin-bottom: 3rem;
+}
+
+.blockHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.blockTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.matchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* ===== NO LIVE ===== */
+.noLive {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.noLiveDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.noLive p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.nextMatch {
+  font-size: 0.85rem !important;
+  color: var(--color-text-muted) !important;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-red);
+  animation: pulse-dot 1.5s infinite;
+  display: inline-block;
+}
+
+/* ===== EMPTY RESULTS ===== */
+.emptyResults {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emptyResults span { font-size: 3rem; }
+.emptyResults h3 { font-family: var(--font-display); font-size: 1.25rem; }
+.emptyResults p { color: var(--color-text-secondary); font-size: 0.9rem; }
+
+/* ===== SCORERS ===== */
+.scorersGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scorerRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+}
+
+.scorerRow:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-card-hover);
+}
+
+.scorerRank {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  width: 32px;
+}
+
+.scorerInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scorerName {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.scorerTeam {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.scorerGoals {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .matchGrid { grid-template-columns: 1fr; }
+}

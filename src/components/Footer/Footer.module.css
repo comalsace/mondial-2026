@@ -1,0 +1,135 @@
+.footer {
+  position: relative;
+  margin-top: 4rem;
+  padding: 3rem 0 2rem;
+  border-top: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.brand {}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  width: fit-content;
+}
+
+.logoName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.logoYear {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.1em;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.linksSection, .infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linksTitle {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  margin-bottom: 0.25rem;
+}
+
+.footerLink {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+  display: block;
+}
+
+.footerLink:hover {
+  color: var(--color-text-primary);
+  padding-left: 4px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.infoItem span:first-child {
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.copyright, .source {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.source a {
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+}
+
+.source a:hover {
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
