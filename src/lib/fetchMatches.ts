@@ -170,7 +170,7 @@ export async function fetchMatches(): Promise<{
 export async function fetchLiveMatches(): Promise<Match[]> {
   if (!isApiConfigured()) return [];
 
-  const data = await apiFetch(`/fixtures?league=${WC_LEAGUE_ID}&season=${WC_SEASON}&live=all`);
+  const data = await apiFetch(`/fixtures?league=${WC_LEAGUE_ID}&season=${WC_SEASON_PRIMARY}&live=all`);
   if (!data?.response?.length) return [];
 
   return data.response
