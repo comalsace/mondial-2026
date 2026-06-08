@@ -5,7 +5,7 @@ import Footer from '@/components/Footer/Footer';
 import PromoPopup from '@/components/PromoPopup/PromoPopup';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mondial2026.fr'),
+  metadataBase: new URL('https://mondial-2026-ten.vercel.app'),
   title: {
     default: 'Mondial 2026 — Coupe du Monde FIFA | Résultats, Calendrier & Actualités',
     template: '%s | Mondial 2026',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://mondial2026.fr',
+    url: 'https://mondial-2026-ten.vercel.app',
     siteName: 'Mondial 2026',
     title: 'Mondial 2026 — Coupe du Monde FIFA | Résultats & Actualités',
     description:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   alternates: {
-    canonical: 'https://mondial2026.fr',
+    canonical: 'https://mondial-2026-ten.vercel.app',
   },
 };
 

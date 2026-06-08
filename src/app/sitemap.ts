@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { TEAMS } from '@/lib/data';
 
-const BASE_URL = 'https://mondial2026.fr';
+const BASE_URL = 'https://mondial-2026-ten.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
