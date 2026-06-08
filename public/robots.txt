@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mondial2026.fr/sitemap.xml
+Sitemap: https://mondial-2026-ten.vercel.app/sitemap.xml
