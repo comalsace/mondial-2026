@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import PromoPopup from '@/components/PromoPopup/PromoPopup';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mondial2026.fr'),
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         <main>{children}</main>
+        <PromoPopup />
         <Footer />
       </body>
     </html>
